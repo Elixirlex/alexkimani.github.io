@@ -1,0 +1,334 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply background image to the body */
+body {
+    background-color: #cea135;
+    /*background-image: url("img\mount-kenya.jpeg"); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the container both vertically and horizontally */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the logo section */
+.logo-section {
+    text-align: center;
+    background-color:#cea135;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Style the logo image */
+.logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Style the club name text */
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px; /* Space between title and nav links */
+}
+
+/* Style the navigation links container */
+.nav-links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    gap: 20px; /* Space between the links */
+    margin-top: 20px; /* Space between the title and the links */
+}
+
+/* Style individual navigation links */
+.nav-link a {
+    text-decoration: none; /* Remove underline from links */
+    color: #2c3e50; /* Dark color for links */
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 10px; /* Add some padding for better click area */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for links */
+.nav-link a:hover {
+    color: #1ed82e; /* Change color on hover */
+}
+
+.projects-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Hide cards that move outside the container */
+    position: relative;
+    white-space: nowrap; /* Prevent cards from wrapping */
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    display: inline-block; /* Allow cards to sit inline for continuous sliding */
+    animation: slideContinuous 20s linear infinite; /* Continuous sliding animation */
+}
+
+/* Define the continuous sliding animation */
+@keyframes slideContinuous {
+    0% {
+        transform: translateX(100vw); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left edge of the container */
+    }
+}
+
+.project-card h3 {
+    font-size: 18px;
+    color: #1a3c5e;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Contributions Section */
+.contributions-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.contributions-section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.contributions-container {
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Custom scrollbar styling (optional) */
+.contributions-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contributions-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.contributions-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.contributions-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.contribution-link {
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the entire box clickable */
+}
+
+.contribution-box {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 100px;
+    transition: all 0.3s ease;
+}
+
+.contribution-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contribution-icon {
+    flex: 0 0 60px;
+    text-align: center;
+}
+
+.contribution-icon i {
+    font-size: 40px;
+    color: #1a3c5e;
+}
+
+.contribution-details {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.contribution-details h3 {
+    font-size: 16px;
+    color: #1a3c5e;
+    margin-bottom: 5px;
+}
+
+.contribution-details .contributor-name {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.contribution-reactions {
+    margin-top: 8px;
+    display: flex;
+    gap: 15px;
+}
+
+.reaction {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+}
+
+.reaction.voted {
+    color: #1a3c5e;
+}
+
+.reaction:hover {
+    color: #1a3c5e;
+}
+
+.reaction-count {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Our Location Section (New) */
+.location-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.location-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.location-section iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer Styles */
+        footer {
+            background-color: #1a3c5e; /* Dark blue-green to match the site theme */
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-footer {
+            margin-bottom: 20px;
+        }
+
+        .logo-footer img {
+            width: 150px; /* Adjusted size for footer */
+            height: auto;
+        }
+
+        .social-media-icons-wrapper {
+            display: grid;
+            grid-template-columns: repeat(5, 50px); /* 5 columns for 5 icons, each 50px wide */
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .social-media-icons-wrapper a {
+            color: #fff;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .social-media-icons-wrapper a:hover {
+            transform: scale(1.2);
+            color: #2E8B57; /* Green color on hover to match the site theme */
+        }
+
+        .footer-copyright {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 600px) {
+            .social-media-icons-wrapper {
+                grid-template-columns: repeat(5, 40px); /* Smaller icons on mobile */
+                gap: 15px;
+            }
+
+            .social-media-icons-wrapper a {
+                font-size: 20px;
+            }
+
+            .logo-footer img {
+                width: 120px;
+            }
+        }
